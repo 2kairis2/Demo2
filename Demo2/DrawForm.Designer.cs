@@ -1,87 +1,90 @@
 ﻿namespace Demo2
 {
-    partial class DrawForm
-    {
-        /// <summary>
-        ///  Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+	partial class DrawForm
+	{
+		/// <summary>
+		///  Required designer variable.
+		/// </summary>
+		private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        ///  Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+		/// <summary>
+		///  Clean up any resources being used.
+		/// </summary>
+		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+		protected override void Dispose(bool disposing)
+		{
+			if (disposing && (components != null))
+			{
+				components.Dispose();
+			}
+			base.Dispose(disposing);
+		}
 
-        #region Windows Form Designer generated code
+		#region Windows Form Designer generated code
 
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
-			this.myPanel = new System.Windows.Forms.Panel();
-			this.btnSave = new System.Windows.Forms.Button();
-			this.btnExit = new System.Windows.Forms.Button();
-			this.SuspendLayout();
+		/// <summary>
+		///  Required method for Designer support - do not modify
+		///  the contents of this method with the code editor.
+		/// </summary>
+		private void InitializeComponent()
+		{
+			myPanel = new Panel();
+			btnSave = new Button();
+			btnExit = new Button();
+			SuspendLayout();
 			// 
 			// myPanel
 			// 
-			this.myPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.myPanel.Location = new System.Drawing.Point(7, 6);
-			this.myPanel.Name = "myPanel";
-			this.myPanel.Size = new System.Drawing.Size(675, 435);
-			this.myPanel.TabIndex = 0;
-			this.myPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.myPanel_Paint);
-			this.myPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.myPanel_MouseClick);
+			myPanel.BackColor = SystemColors.ButtonHighlight;
+			myPanel.Location = new Point(7, 6);
+			myPanel.Name = "myPanel";
+			myPanel.Size = new Size(675, 435);
+			myPanel.TabIndex = 0;
+			myPanel.Paint += myPanel_Paint;
+			myPanel.MouseClick += myPanel_MouseClick;
+			myPanel.MouseDown += myPanel_MouseDown;
+			myPanel.MouseMove += myPanel_MouseMove;
+			myPanel.MouseUp += myPanel_MouseUp;
 			// 
 			// btnSave
 			// 
-			this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.System;
-			this.btnSave.Location = new System.Drawing.Point(702, 107);
-			this.btnSave.Name = "btnSave";
-			this.btnSave.Size = new System.Drawing.Size(94, 29);
-			this.btnSave.TabIndex = 0;
-			this.btnSave.Text = "Lưu";
-			this.btnSave.UseVisualStyleBackColor = true;
-			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+			btnSave.FlatStyle = FlatStyle.System;
+			btnSave.Location = new Point(702, 107);
+			btnSave.Name = "btnSave";
+			btnSave.Size = new Size(94, 29);
+			btnSave.TabIndex = 0;
+			btnSave.Text = "Cập nhật";
+			btnSave.UseVisualStyleBackColor = true;
+			btnSave.Click += btnSave_Click;
 			// 
 			// btnExit
 			// 
-			this.btnExit.Location = new System.Drawing.Point(702, 189);
-			this.btnExit.Name = "btnExit";
-			this.btnExit.Size = new System.Drawing.Size(94, 29);
-			this.btnExit.TabIndex = 1;
-			this.btnExit.Text = "Thoát";
-			this.btnExit.UseVisualStyleBackColor = true;
-			this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+			btnExit.Location = new Point(702, 189);
+			btnExit.Name = "btnExit";
+			btnExit.Size = new Size(94, 29);
+			btnExit.TabIndex = 1;
+			btnExit.Text = "Thoát";
+			btnExit.UseVisualStyleBackColor = true;
+			btnExit.Click += btnExit_Click;
 			// 
 			// DrawForm
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(820, 457);
-			this.Controls.Add(this.btnExit);
-			this.Controls.Add(this.btnSave);
-			this.Controls.Add(this.myPanel);
-			this.Name = "DrawForm";
-			this.Text = "Draw Form";
-			this.ResumeLayout(false);
+			AutoScaleDimensions = new SizeF(8F, 20F);
+			AutoScaleMode = AutoScaleMode.Font;
+			ClientSize = new Size(820, 457);
+			Controls.Add(btnExit);
+			Controls.Add(btnSave);
+			Controls.Add(myPanel);
+			Name = "DrawForm";
+			Text = "Draw Form";
+			Load += DrawForm_Load;
+			ResumeLayout(false);
+		}
 
-        }
+		#endregion
 
-        #endregion
-
-        private Panel myPanel;
-        private Button btnSave;
-        private Button btnExit;
-    }
+		private Panel myPanel;
+		private Button btnSave;
+		private Button btnExit;
+	}
 }

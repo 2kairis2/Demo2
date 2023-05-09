@@ -10,6 +10,6 @@ namespace Demo2
     {
         public Node StartNode { get; set; }
         public Node EndNode { get; set; }
-        public int Weight { get; set; }
+     
     }
 }
