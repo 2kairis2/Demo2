@@ -30,20 +30,18 @@
 		{
 			menuStrip1 = new MenuStrip();
 			updateToolStripMenuItem = new ToolStripMenuItem();
-			createNewToolStripMenuItem = new ToolStripMenuItem();
 			operatorToolStripMenuItem = new ToolStripMenuItem();
 			tinhLienThongToolStripMenuItem = new ToolStripMenuItem();
 			duyetDoThiToolStripMenuItem = new ToolStripMenuItem();
 			eulerToolStripMenuItem = new ToolStripMenuItem();
-			saveToolStripMenuItem = new ToolStripMenuItem();
-			saveFileDialog1 = new SaveFileDialog();
+			TtToolStripMenuItem = new ToolStripMenuItem();
 			menuStrip1.SuspendLayout();
 			SuspendLayout();
 			// 
 			// menuStrip1
 			// 
 			menuStrip1.ImageScalingSize = new Size(20, 20);
-			menuStrip1.Items.AddRange(new ToolStripItem[] { updateToolStripMenuItem, operatorToolStripMenuItem, saveToolStripMenuItem });
+			menuStrip1.Items.AddRange(new ToolStripItem[] { updateToolStripMenuItem, operatorToolStripMenuItem, TtToolStripMenuItem });
 			menuStrip1.Location = new Point(0, 0);
 			menuStrip1.Name = "menuStrip1";
 			menuStrip1.Size = new Size(972, 28);
@@ -52,18 +50,10 @@
 			// 
 			// updateToolStripMenuItem
 			// 
-			updateToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { createNewToolStripMenuItem });
 			updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-			updateToolStripMenuItem.Size = new Size(125, 24);
-			updateToolStripMenuItem.Text = "Cập nhật đồ thị";
+			updateToolStripMenuItem.Size = new Size(121, 24);
+			updateToolStripMenuItem.Text = "Tạo mới đồ thị";
 			updateToolStripMenuItem.Click += updateToolStripMenuItem_Click;
-			// 
-			// createNewToolStripMenuItem
-			// 
-			createNewToolStripMenuItem.Name = "createNewToolStripMenuItem";
-			createNewToolStripMenuItem.Size = new Size(224, 26);
-			createNewToolStripMenuItem.Text = "Tạo mới đồ thị";
-			createNewToolStripMenuItem.Click += createNewToolStripMenuItem_Click;
 			// 
 			// operatorToolStripMenuItem
 			// 
@@ -93,12 +83,12 @@
 			eulerToolStripMenuItem.Text = "Euler";
 			eulerToolStripMenuItem.Click += eulerToolStripMenuItem_Click;
 			// 
-			// saveToolStripMenuItem
+			// TtToolStripMenuItem
 			// 
-			saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-			saveToolStripMenuItem.Size = new Size(67, 24);
-			saveToolStripMenuItem.Text = "Lưu lại";
-			saveToolStripMenuItem.Click += saveToolStripMenuItem_Click;
+			TtToolStripMenuItem.Name = "TtToolStripMenuItem";
+			TtToolStripMenuItem.Size = new Size(86, 24);
+			TtToolStripMenuItem.Text = "Thông tin";
+			TtToolStripMenuItem.Click += thoToolStripMenuItem_Click;
 			// 
 			// MainForm
 			// 
@@ -110,6 +100,7 @@
 			MainMenuStrip = menuStrip1;
 			Name = "MainForm";
 			Text = "MainForm";
+			Load += MainForm_Load;
 			menuStrip1.ResumeLayout(false);
 			menuStrip1.PerformLayout();
 			ResumeLayout(false);
@@ -122,10 +113,8 @@
 		private ToolStripMenuItem updateToolStripMenuItem;
 		private ToolStripMenuItem operatorToolStripMenuItem;
 		private ToolStripMenuItem tinhLienThongToolStripMenuItem;
-		private ToolStripMenuItem saveToolStripMenuItem;
-		private ToolStripMenuItem createNewToolStripMenuItem;
 		private ToolStripMenuItem duyetDoThiToolStripMenuItem;
-		private SaveFileDialog saveFileDialog1;
 		private ToolStripMenuItem eulerToolStripMenuItem;
+		private ToolStripMenuItem TtToolStripMenuItem;
 	}
 }

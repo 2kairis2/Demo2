@@ -23,6 +23,7 @@ namespace Demo2
                     G[i, j] = 0;
         }
 		
+
 		public int Number_Of_Connected_Components()
 		{
 			bool[] visted = new bool[this.n + 1];
@@ -130,6 +131,7 @@ namespace Demo2
             G[node2, node1] = 0;
         }
 
+
         public bool isAdjacent(int node1, int node2)
         {
             return G[node1, node2] != 0;
@@ -183,20 +185,7 @@ namespace Demo2
            
         }
 
-        private int min_key(int[] key, bool[] mst_set)
-        {
-            int min = int.MaxValue;
-            int min_node = 0;
-
-            for(int i = 1; i <= n; i++)
-                if (mst_set[i] == false && key[i] < min)
-                {
-                    min = key[i];
-                    min_node = i;
-                }
-
-            return min_node;
-        }
+       
       
     }
 	
